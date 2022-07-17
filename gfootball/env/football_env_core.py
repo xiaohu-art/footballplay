@@ -155,6 +155,8 @@ class FootballEnvCore(object):
         'Cant call step() once episode finished (call reset() instead)')
     assert self._env.state == GameState.game_running, (
         'reset() must be called before step()')
+
+    print("action in step: ", action)
     action = [
         football_action_set.named_action_from_action_set(self._action_set, a)
         for a in action

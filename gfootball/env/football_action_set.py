@@ -183,6 +183,7 @@ reverse_action_mapping = {
 # Returns action set specified by the config.
 def get_action_set(config):
   action_set_name = config["action_set"]
+
   return action_set_dict[action_set_name]
 
 def get_sticky_actions(config):

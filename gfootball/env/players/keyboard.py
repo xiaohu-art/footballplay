@@ -48,7 +48,7 @@ class Player(controller_base.Controller):
     event_queue.add_controller('keyboard')
 
   def take_action(self, observations):
-    assert len(observations) == 1, 'Keyboard does not support multiple player control'
+    # assert len(observations) == 1, 'Keyboard does not support multiple player control'
     if not self._init_done:
       self._init_done = True
       pygame.display.set_mode((1, 1), pygame.NOFRAME)

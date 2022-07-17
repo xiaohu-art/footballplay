@@ -17,6 +17,7 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+from tkinter.tix import Tree
 
 from gfootball.env import config
 from gfootball.env import football_env
@@ -93,9 +94,10 @@ def create_environment(env_name='',
                        write_goal_dumps=False,
                        write_full_episode_dumps=False,
                        render=False,
-                       write_video=False,
+                      #  write_video=False,
+                       write_video=True,
                        dump_frequency=1,
-                       logdir='',
+                       logdir='../',
                        extra_players=None,
                        number_of_left_players_agent_controls=1,
                        number_of_right_players_agent_controls=0,

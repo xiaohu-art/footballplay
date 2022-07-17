@@ -23,14 +23,13 @@ import copy
 import importlib
 from absl import logging
 
-from gfootball.env import config as cfg
+from gfootball.env import config as cfg, observation_preprocessing
 from gfootball.env import constants
 from gfootball.env import football_action_set
 from gfootball.env import football_env_core
 from gfootball.env import observation_rotation
 import gym
 import numpy as np
-
 
 class FootballEnv(gym.Env):
   """Allows multiple players to play in the same environment."""
@@ -131,28 +130,33 @@ class FootballEnv(gym.Env):
     return observations
 
   def _action_to_list(self, a):
+    t = a
     if isinstance(a, np.ndarray):
-      return a.tolist()
+      t = a.tolist()
     if not isinstance(a, list):
-      return [a]
-    return a
+      t =[a]
+    return t
 
   def _get_actions(self):
-    obs = self._env.observation()
+
+    obs = self._env.observation()       # obs dict
     left_actions = []
     right_actions = []
     left_player_position = 0
     right_player_position = 0
     for player in self._players:
-      adopted_obs = self._convert_observations(obs, player,
+
+      adopted_obs = self._convert_observations(obs, player,             # adopted_obs  list
                                                left_player_position,
                                                right_player_position)
       left_player_position += player.num_controlled_left_players()
       right_player_position += player.num_controlled_right_players()
+      
       a = self._action_to_list(player.take_action(adopted_obs))
       assert len(adopted_obs) == len(
           a), 'Player provided {} actions instead of {}.'.format(
               len(a), len(adopted_obs))
+      
       if not player.can_play_right():
         for x in range(player.num_controlled_right_players()):
           index = x + player.num_controlled_left_players()
@@ -160,6 +164,7 @@ class FootballEnv(gym.Env):
               a[index], self._config)
       left_actions.extend(a[:player.num_controlled_left_players()])
       right_actions.extend(a[player.num_controlled_left_players():])
+
     actions = left_actions + right_actions
     return actions
 

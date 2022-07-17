@@ -375,7 +375,7 @@ class FootballEnvTest(parameterized.TestCase):
     if 'UNITTEST_IN_DOCKER' in os.environ:
       # Forge doesn't support rendering.
       return
-    cfg = config.Config({'write_video': False})
+    cfg = config.Config({'write_video': True})
     env = football_env.FootballEnv(cfg)
     env.render()
     env.reset()

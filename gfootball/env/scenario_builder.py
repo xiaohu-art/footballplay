@@ -50,7 +50,7 @@ class Scenario(object):
 
   def __init__(self, config):
     # Game config controls C++ engine and is derived from the main config.
-    self._scenario_cfg = libgame.ScenarioConfig.make()
+    self._scenario_cfg = libgame.ScenarioConfig.make()    ### libgame make?
     self._config = config
     self._active_team = Team.e_Left
     scenario = None

@@ -1,0 +1,9 @@
+numpy
+cffi
+wandb
+setproctitle
+icecream
+tensorboardX
+gym
+pysc2
+torch

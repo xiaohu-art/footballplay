@@ -33,7 +33,7 @@ def build_scenario(builder):
     first_team = Team.e_Right
     second_team = Team.e_Left
   builder.SetTeam(first_team)
-  builder.AddPlayer(-1.000000, 0.000000, e_PlayerRole_GK)
+  builder.AddPlayer(-1.000000, 0.000000, e_PlayerRole_GK, controllable=False)
   builder.AddPlayer(-0.422000, -0.19576, e_PlayerRole_LB)
   builder.AddPlayer(-0.500000, -0.06356, e_PlayerRole_CB)
   builder.AddPlayer(-0.500000, 0.063559, e_PlayerRole_CB)
@@ -45,7 +45,7 @@ def build_scenario(builder):
   builder.AddPlayer(0.000000, 0.020000, e_PlayerRole_CF)
   builder.AddPlayer(0.000000,  -0.020000, e_PlayerRole_RM)
   builder.SetTeam(second_team)
-  builder.AddPlayer(-1.000000, 0.000000, e_PlayerRole_GK)
+  builder.AddPlayer(-1.000000, 0.000000, e_PlayerRole_GK, controllable=True)
   builder.AddPlayer(-0.422000, -0.19576, e_PlayerRole_LB)
   builder.AddPlayer(-0.500000, -0.06356, e_PlayerRole_CB)
   builder.AddPlayer(-0.500000, 0.063559, e_PlayerRole_CB)
