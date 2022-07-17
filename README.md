@@ -189,3 +189,5 @@ See [running in docker](gfootball/doc/docker.md) for details (just override the 
 
 In order to train against a checkpoint, you can pass 'extra_players' argument to create_environment function.
 For example extra_players='ppo2_cnn:right_players=1,policy=gfootball_impala_cnn,checkpoint=$CHECKPOINT'.
+#   f o o t b a l l p l a y  
+ 
