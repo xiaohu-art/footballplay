@@ -20,5 +20,6 @@ The game defines following keyboard mapping (for the `keyboard` player type):
 In particular, one can play against agent trained with `run_ppo2` script with
 the following command (notice no action_set flag, as PPO agent uses default
 action set):
-`python3 -m gfootball.play_game --players "keyboard:left_players=1;ppo2_cnn:right_players=1,checkpoint=$YOUR_PATH"`
+
+python -m gfootball.play_game --players "keyboard:left_players=1;ppo2_cnn:right_players=11,checkpoint=11_vs_11_easy_stochastic_v2"
 
