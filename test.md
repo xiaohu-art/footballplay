@@ -1,1 +1,0 @@
-python -m gfootball.play_game --players "keyboard:left_players=1;ppo2_cnn:right_players=11,checkpoint=11_vs_11_easy_stochastic_v2"
