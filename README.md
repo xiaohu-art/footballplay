@@ -7,13 +7,13 @@ The game defines following keyboard mapping (for the `keyboard` player type):
 * `ARROW DOWN` - run to the bottom.
 * `ARROW LEFT` - run to the left.
 * `ARROW RIGHT` - run to the right.
-* `S` - short pass in the attack mode, pressure in the defense mode.
-* `A` - high pass in the attack mode, sliding in the defense mode.
-* `D` - shot in the attack mode, team pressure in the defense mode.
-* `W` - long pass in the attack mode, goalkeeper pressure in the defense mode.
-* `Q` - switch the active player in the defense mode.
-* `C` - dribble in the attack mode.
-* `E` - sprint.
+* `S` - short pass in the attack mode, pressure in the defense mode.              LB
+* `A` - high pass in the attack mode, sliding in the defense mode.                RB
+* `D` - shot in the attack mode, team pressure in the defense mode.               LT
+* `W` - long pass in the attack mode, goalkeeper pressure in the defense mode.    RT
+* `Q` - switch the active player in the defense mode.                             Y
+* `C` - dribble in the attack mode.                                               B
+* `E` - sprint.                                                                   E
 
 ### Play vs pre-trained agent
 
